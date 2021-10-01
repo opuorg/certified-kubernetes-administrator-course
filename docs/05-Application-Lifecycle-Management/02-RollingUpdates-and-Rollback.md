@@ -25,6 +25,19 @@ In this section, we will take a look at rolling updates and rollback in a deploy
   2. RollingUpdate (Default Strategy)
   
   ![dst](../../images/dst.PNG)
+
+```
+strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+```
+
+```
+strategy:
+    type: Recreate
+```
   
 ## kubectl apply
 - To update a deployment, edit the deployment and make necessary changes and save it. Then run the below command.
