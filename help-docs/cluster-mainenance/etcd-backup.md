@@ -49,3 +49,6 @@ Notes:
 
 
 Tips:
+- when taking snapshot, kubernetes docs can be used. 
+- same with restore, but make sure to add `--data-dir=<new-dr>` in restore command, 
+  - then edit volume location for etcd pod in static pod directory to point to new dir.
