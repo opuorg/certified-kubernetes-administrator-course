@@ -1,0 +1,5 @@
+- docker bridge network is docker0 in docker interface
+- interface docker0 in container is bridge network in host. 
+- docker0 has an ip
+- containers create a net ns. 
+- container namespace is same as network namespace for that container. 

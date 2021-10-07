@@ -41,19 +41,19 @@ ETCDKEY=etcd-server.key
 SACERT=service-account.crt
 SAKEY=service-account.key
 
-# All kubeconfig locations
+# All kubeconfig.md locations
 
-# kubeproxy.kubeconfig location
-KPKUBECONFIG=kube-proxy.kubeconfig
+# kubeproxy.kubeconfig.md location
+KPKUBECONFIG=kube-proxy.kubeconfig.md
 
-# kube-controller-manager.kubeconfig location
-KCMKUBECONFIG=kube-controller-manager.kubeconfig
+# kube-controller-manager.kubeconfig.md location
+KCMKUBECONFIG=kube-controller-manager.kubeconfig.md
 
-# kube-scheduler.kubeconfig location
-KSKUBECONFIG=kube-scheduler.kubeconfig
+# kube-scheduler.kubeconfig.md location
+KSKUBECONFIG=kube-scheduler.kubeconfig.md
 
-# admin.kubeconfig location
-ADMINKUBECONFIG=admin.kubeconfig
+# admin.kubeconfig.md location
+ADMINKUBECONFIG=admin.kubeconfig.md
 
 # All systemd service locations
 
@@ -75,8 +75,8 @@ SYSTEMD_KS_FILE=/etc/systemd/system/kube-scheduler.service
 WORKER_1_CERT=/var/lib/kubelet/worker-1.crt
 WORKER_1_KEY=/var/lib/kubelet/worker-1.key
 
-# Worker-1 kubeconfig location
-WORKER_1_KUBECONFIG=/var/lib/kubelet/kubeconfig
+# Worker-1 kubeconfig.md location
+WORKER_1_KUBECONFIG=/var/lib/kubelet/kubeconfig.md
 
 # Worker-1 kubelet config location
 WORKER_1_KUBELET=/var/lib/kubelet/kubelet-config.yaml
@@ -85,7 +85,7 @@ WORKER_1_KUBELET=/var/lib/kubelet/kubelet-config.yaml
 SYSTEMD_WORKER_1_KUBELET=/etc/systemd/system/kubelet.service
 
 # kube-proxy worker-1 location
-WORKER_1_KP_KUBECONFIG=/var/lib/kube-proxy/kubeconfig
+WORKER_1_KP_KUBECONFIG=/var/lib/kube-proxy/kubeconfig.md
 SYSTEMD_WORKER_1_KP=/etc/systemd/system/kube-proxy.service
 
 
@@ -514,7 +514,7 @@ check_systemd_kcm()
     CACERT=/var/lib/kubernetes/ca.crt
     CAKEY=/var/lib/kubernetes/ca.key
     SAKEY=/var/lib/kubernetes/service-account.key
-    KCMKUBECONFIG=/var/lib/kubernetes/kube-controller-manager.kubeconfig
+    KCMKUBECONFIG=/var/lib/kubernetes/kube-controller-manager.kubeconfig.md
     if [ -z $KCMCERT ] && [ -z $KCMKEY ]
         then
             printf "${FAILED}please specify cert and key location\n"
@@ -546,7 +546,7 @@ check_systemd_ks()
 {
     KSCERT=/var/lib/kubernetes/kube-scheduler.crt
     KSKEY=/var/lib/kubernetes/kube-scheduler.key
-    KSKUBECONFIG=/var/lib/kubernetes/kube-scheduler.kubeconfig
+    KSKUBECONFIG=/var/lib/kubernetes/kube-scheduler.kubeconfig.md
 
     if [ -z $KSCERT ] && [ -z $KSKEY ]
         then
