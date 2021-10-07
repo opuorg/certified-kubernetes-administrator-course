@@ -19,3 +19,8 @@ Apart from that, you must also specify path to certificate files so that ETCDCTL
 ```
 kubectl run nginx --image nginx
 ```
+
+## Notes:
+- each node has kubelet as service
+- each node has kube-proxy which is a daemonset
+    - it uses it's config file from a configmap. 

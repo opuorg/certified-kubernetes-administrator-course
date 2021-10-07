@@ -1,5 +1,12 @@
 * api groups are what comes after url base domain, such as /version, /api, /apis etc.
 
+- get api-versions:
+`kubectl api-versions`
+  
+- get api-groups:
+`kubectl api-resources`
+  - this command shows each of the resources, with the api groups
+  - core resources don't have apiGroups, they are kept empty. 
 * there are two categories of apis:
 - api:
     - core: core func
