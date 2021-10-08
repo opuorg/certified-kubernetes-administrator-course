@@ -24,3 +24,6 @@ kubectl run nginx --image nginx
 - each node has kubelet as service
 - each node has kube-proxy which is a daemonset
     - it uses it's config file from a configmap. 
+- create a temp container in fly to test
+  `kubectl run ngxinx --image=nginx --rm -it -- sh`
+  
