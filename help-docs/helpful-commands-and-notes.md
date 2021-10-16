@@ -27,3 +27,19 @@ kubectl run nginx --image nginx
 - create a temp container in fly to test
   `kubectl run ngxinx --image=nginx --rm -it -- sh`
   
+
+- see net interface info:
+`ip link/ip a`
+  
+- see interface assigned to node01: `arp node01`
+
+- see routes traffic is taking: `ip route show default`
+
+- see ports for specific: `netstat -nplt`
+
+- clusterip range is defined in kube-api-server manfiest as option `    - --service-cluster-ip-range=10.96.0.0/12`
+
+
+
+- expose a port during pod creation
+``
