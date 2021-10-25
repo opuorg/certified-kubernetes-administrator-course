@@ -31,6 +31,7 @@
   - one method could be that use the ip of the svc and the port
   - another is this way:
 ```
+<svc-name>.<ns>.svc.<cluster>.<domain>
 web-service.default.svc.cluster.local has address 10.106.112.101
 
 web-service.default.svc.cluster.local has address 10.106.112.101

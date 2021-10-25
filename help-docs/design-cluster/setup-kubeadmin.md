@@ -26,3 +26,7 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-ku
 
 ## Notes:
 - see versions: `sudo apt-cache madison kubeadm`
+- get token from master node: `kubeadm token list`
+- get ca hash: `openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | \
+  openssl dgst -sha256 -hex | sed 's/^.* //'`
+- controlplane port is normally `6443`

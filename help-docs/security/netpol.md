@@ -37,3 +37,20 @@ spec:
       protocol: TCP
 
 ```
+
+- spec.podSelector: which pod to apply the policy on, uses label to determine
+```
+ingress:
+- from:
+  - podSelector: 
+        matchLabels:
+            name: label
+    namespaceSelector: 
+        name: ns
+  - ipBlock:
+        cidr: xx.xx.xx.xx/xx
+        
+  ports:
+  - protocol:
+    port: 
+```
